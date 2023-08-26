@@ -1,274 +1,150 @@
-<h2 id="antar-mic74-arduino-library"><a href="https://tarandr.github.io/MIC74/">AnTar MIC74 Arduino Library</a></h2>
-<p>It is an Arduino Library to control the MIC74 8-Bit I/O Expander. </p>
-<p>The MIC74 device provides 8-bit, general purpose, parallel I/O expansion. It can be controlled via I²C bus applications. It is a great and inexpensive device that allow you to add more peripherals to be controlled by your Arduino board via I²C protocol.</p>
-<p>Some Arduino projects may require more pins than the Arduino actually has. In these cases, you can use up to 8 MIC74 devices using only the I²C bus (two Arduino pins) and add up to 64 input / output ports to your project. </p>
-<p>This Arduino library implements the most important functions available on MIC74 device  and can be freely distributed using the MIT Free Software model. </p>
-<p><a href="https://tarandr.github.io/MIC74/#mit-license">Copyright (c) 2023 Tarasenko Andrey</a>.</p>
+<p>Documentation made in <a
+href="https://pandao.github.io/editor.md/en.html"
+title="Open source online Markdown editor">Open source online Markdown
+editor</a>.</p>
+<h2 id="antar-mic74-arduino-library"><a
+href="https://tarandr.github.io/MIC74/">AnTar MIC74 Arduino
+Library</a></h2>
+<p>It is an Arduino Library to control the MIC74 8-Bit I/O Expander.</p>
+<p>The MIC74 device provides 8-bit, general purpose, parallel I/O
+expansion. It can be controlled via I²C bus applications. It is a great
+and inexpensive device that allow you to add more peripherals to be
+controlled by your Arduino board via I²C protocol.</p>
+<p>Some Arduino projects may require more pins than the Arduino actually
+has. In these cases, you can use up to 8 MIC74 devices using only the
+I²C bus (two Arduino pins) and add up to 64 input / output ports to your
+project.</p>
+<p>This Arduino library implements the most important functions
+available on MIC74 device and can be freely distributed using the MIT
+Free Software model.</p>
+<p><a href="https://tarandr.github.io/MIC74/#mit-license">Copyright (c)
+2023 Tarasenko Andrey</a>.</p>
 <h3 id="contents">Contents</h3>
-<ol>
-<li><a href="https://tarandr.github.io/MIC74/#mit-license">License Copyright</a></li>
+<ol type="1">
+<li><a href="https://tarandr.github.io/MIC74/#mit-license">License
+Copyright</a></li>
 <li><a href="https://tarandr.github.io/MIC74/#thanks">Thanks</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#library-features">Library Features</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#library-installation">Library Installation</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#other-arduino-libraries-developed-by-the-author">Other Arduino Libraries developed by the Author</a></li>
-<li><a href="https://tarandr.github.io/MIC74/extras/apidoc/html/">API documentation</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#basic-schematic">Basic Schematic</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#internal-interrupt-setup">Internal Interrupt setup</a> </li>
-<li><a href="https://tarandr.github.io/MIC74/#mcp23008-reset-control">MIC74 reset control</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#references">References</a></li>
+<li><a href="https://tarandr.github.io/MIC74/#library-features">Library
+Features</a></li>
+<li><a
+href="https://tarandr.github.io/MIC74/#library-installation">Library
+Installation</a></li>
+<li><a
+href="https://tarandr.github.io/MIC74/#other-arduino-libraries-developed-by-the-author">Other
+Arduino Libraries developed by the Author</a></li>
+<li><a href="https://tarandr.github.io/MIC74/extras/apidoc/html/">API
+documentation</a></li>
+<li><a href="https://tarandr.github.io/MIC74/#basic-schematic">Basic
+Schematic</a></li>
+<li><a
+href="https://tarandr.github.io/MIC74/#internal-interrupt-setup">Internal
+Interrupt setup</a></li>
+<li><a
+href="https://tarandr.github.io/MIC74/#references">References</a></li>
 </ol>
 <h3 id="mit-license">MIT License</h3>
 <p>Copyright (c) 2023 Andrey Tarasenko</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the &quot;Software&quot;), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE..</p>
-<h3 id="thanks">Thanks</h3>
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ### Thanks</p>
 <ul>
-<li>Mrs. <a href="https://github.com/pu2clr">Ricardo Lima Caratti</a> the <a href="https://github.com/pu2clr/MCP23008/">MCP23008</a> library he created was taken as a template.</li>
+<li>Mrs. <a href="https://github.com/pu2clr">Ricardo Lima Caratti</a>
+the <a href="https://github.com/pu2clr/MCP23008/">MCP23008</a> library
+he created was taken as a template.</li>
 </ul>
 <h3 id="library-features">Library Features</h3>
-<p>This library uses the I²C communication protocol and implements most important functions offered by MIC74 device from Microchip. It also has primitive functions that make it easier to implement commands that may not have been implemented yet. The main features implemented can be seen below:</p>
+<p>This library uses the I²C communication protocol and implements most
+important functions offered by MIC74 device from Microchip. It also has
+primitive functions that make it easier to implement commands that may
+not have been implemented yet. The main features implemented can be seen
+below:</p>
 <ul>
 <li>GPIO individual control (8 I/O pins)</li>
-<li>Reading and writing Access to all registers (0x00 ~ 0xA) </li>
+<li>Reading and writing Access to all registers (0x00 ~ 0x06)</li>
 <li>I²C address customization (0x20 ~ 0x27)</li>
-<li>Output mode configure (push-pull or open-drain)</li>
+<li>Output mode configuration (push-pull or open-drain)</li>
 <li>Internal Interrupt feature setup</li>
 <li>Fan speed control</li>
 </ul>
 <h3 id="demo-video">Demo video</h3>
 <p>{% include video01.html %}</p>
-<p><a href="https://youtu.be/rNnMtvlUPgk">See on Youtube</a>
-<BR></p>
+<p><a href="https://www.youtube.com/watch?v=muUAhf5DGE8">See on
+Youtube</a> <BR></p>
 <h3 id="registers">Registers</h3>
-<p>This library has two basic function that you can use to control everything on MCP23008. You can use <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/class_m_c_p.html#a490e4a6820e3a2e0dd86c1a7aa5bb920">getRegister</a> and <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/class_m_c_p.html#aba8f4501efb5a9772a5b7ec7a428ac4d">setRegister</a> methods to setup the registers below. Also this library has other functions that make the job easier to build applications based on Arduino and MCP23008 devices. See <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/">API documentation</a>.</p>
+<p>This library has two basic function that you can use to control
+everything on MIC74. You can use <a
+href="https://www.youtube.com/watch?v=muUAhf5DGE8">regRead</a> and <a
+href="https://www.youtube.com/watch?v=muUAhf5DGE8">regWrite</a> methods
+to setup the registers below. Also this library has other functions that
+make the job easier to build applications based on Arduino and MIC74
+devices. See <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">API
+documentation</a>.</p>
 <table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 20%" />
+<col style="width: 48%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Register</th>
-<th>Value</th>
+<th>Address</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>IODIR</td>
+<tbody>
+<tr class="odd">
+<td>DEV_CFG</td>
 <td>0x00</td>
-<td>Controls the direction of the data I/O. When  a  bit  is  set,  the  corresponding  pin  becomes  an input.  When  a  bit  is  clear,  the  corresponding  pin becomes an output.</td>
+<td>Device configuration read/write register</td>
 </tr>
-<tr>
-<td>IPOL</td>
+<tr class="even">
+<td>DIR</td>
 <td>0x01</td>
-<td>The IPOL  register  allows  the  user  to  configure  thepolarity on the corresponding GPIO port bits.</td>
+<td>Data direction read/write register</td>
 </tr>
-<tr>
-<td>GPINTEN</td>
+<tr class="odd">
+<td>OUT_CFG</td>
 <td>0x02</td>
-<td>The GPINTEN register controls the interrupt-on-change feature for each pin.</td>
+<td>Output configuration read/write register</td>
 </tr>
-<tr>
-<td>DEFVAL</td>
+<tr class="even">
+<td>STATUS</td>
 <td>0x03</td>
-<td>The default  comparison  value  is  configured  in  the DEFVAL register.</td>
+<td>Status read register</td>
 </tr>
-<tr>
-<td>INTCON</td>
+<tr class="odd">
+<td>INT_MASK</td>
 <td>0x04</td>
-<td>The INTCON register controls how the associated pin value is compared for the interrupt-on-change feature.</td>
+<td>Interrupt mask read/write register</td>
 </tr>
-<tr>
-<td>IOCON</td>
+<tr class="even">
+<td>DATA</td>
 <td>0x05</td>
-<td>The IOCON register contains several bits for configuring the device.</td>
+<td>Data read/write register</td>
 </tr>
-<tr>
-<td>GPPU</td>
+<tr class="odd">
+<td>FAN_SPEED</td>
 <td>0x06</td>
-<td>The GPPU register controls the pull-up resistors for the port  pins.</td>
+<td>Fan speed read/write register, Determines bit-pattern on
+FS[2:0]</td>
 </tr>
-<tr>
-<td>INTF</td>
-<td>0x07</td>
-<td>The INTF register reflects the interrupt condition on the port pins of any pin that is enabled for interrupts via the GPINTEN register.</td>
-</tr>
-<tr>
-<td>INTCAP</td>
-<td>0x08</td>
-<td>The INTCAP register captures the GPIO port value at the  time  the  interrupt  occurred.</td>
-</tr>
-<tr>
-<td>GPIO</td>
-<td>0x09</td>
-<td>The GPIO  register  reflects  the  value  on  the  port.</td>
-</tr>
-<tr>
-<td>OLAT</td>
-<td>0x0A</td>
-<td>The OLAT  register  provides  access  to  the  output latches.</td>
-</tr>
-</tbody></table>
-<p>Also this library has other functions that make the job easier to build applications. See <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/">API documentation</a>.</p>
-<h3 id="library-installation">Library Installation</h3>
-<p>You can install this library on your Arduino environment using different methods. The best ways to do that are described below.  </p>
-<h4 id="installing-via-arduino-ide">Installing via Arduino IDE</h4>
-<p>This is the easiest method to install this library.</p>
-<p>On Arduino IDE, select the <strong>&quot;Manager Libraries...&quot;</strong> item and look for MCP23008. Finally select &quot;PU2CLR MCP23008&quot;. The images below show the installation process. </p>
-<h5 id="going-to-manager-libraries">Going to Manager libraries...</h5>
-<p><img src="extras/images/install_lib_01.png" alt="Basic Schematic with LEDs"></p>
-<h5 id="looking-for-mcp23008">Looking for MCP23008</h5>
-<p><img src="extras/images/install_lib_02.png" alt="Basic Schematic with LEDs"></p>
-<h5 id="checking-the-pu2clr_mcp23008-examples">Checking the PU2CLR_MCP23008 examples</h5>
-<p><img src="extras/images/install_lib_03.png" alt="Basic Schematic with LEDs"></p>
-<h5 id="more-information">More information</h5>
-<p>See also <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library/using-the-arduino-library-manager">Installing an Arduino Library </a></p>
-<h4 id="installing-via-this-repository">Installing via this repository</h4>
-<p>First, you have to <a href="https://github.com/pu2clr/MCP23008/archive/main.zip">download</a> this library in zip format. 
-After, unzip the MCP23008-master.zip file in your Arduino Library folder. </p>
-<ul>
-<li>On <strong>Windows</strong>: &quot;My Documents\Arduino\libraries&quot;</li>
-<li>On <strong>MAC OS</strong>: ˜/Documents/Arduino/libraries</li>
-<li>On <strong>Linux</strong>: ˜/Documents/Arduino/libraries</li>
-</ul>
-<p>With that approach, you will have the <strong>most current version</strong> of the library. However, <strong>it may not be the most stable version</strong>. This is because the current version is always in development. <a href="https://github.com/pu2clr/MCP23008/releases">Prefer releases</a>.
-Do you need some old version (release) of this library?  If yes, <a href="https://github.com/pu2clr/MCP23008/releases">check here</a>. </p>
-<h3 id="other-arduino-libraries-and-projects-developed-by-the-author">Other Arduino Libraries and projects developed by the Author</h3>
-<ul>
-<li><a href="https://pu2clr.github.io/SI4735/">PU2CLR Si4735 Library for Arduino</a>. This library was built based on “Si47XX PROGRAMMING GUIDE; AN332” and it has support to FM, AM and SSB modes (LW, MW and SW). It also can be used on all members of the SI47XX family respecting, of course, the features available for each IC version;</li>
-<li><a href="https://github.com/pu2clr/SI4844">PU2CLR SI4844 Arduino Library</a>. This is an Arduino library for the SI4844, BROADCAST ANALOG TUNING DIGITAL DISPLAY AM/FM/SW RADIO RECEIVER,  IC from Silicon Labs.  It is available on Arduino IDE. This library is intended to provide an easier interface for controlling the SI4844.</li>
-<li><a href="https://pu2clr.github.io/AKC695X/">PU2CLR AKC695X Arduino Library</a>. The AKC695X is a family of IC DSP receiver from AKC technology. The AKC6955 and AKC6959sx support AM and FM modes. On AM mode the AKC6955 and AKC6959sx work on LW, MW and SW. On FM mode they work from 64MHz to 222MHz.</li>
-<li><a href="https://pu2clr.github.io/KT0915/">PU2CLR KT0915 Arduino Library</a>. The KT0915 is a full band AM (LW, MW and SW) and FM DSP receiver that can provide you a easy way to build a high quality radio with low cost.</li>
-<li><a href="https://pu2clr.github.io/BK108X/">PU2CLR BK108X</a>. The BK1086 and BK1088 are DSP receivers from BAKEN. The BK1088 is a BROADCAST FM and AM (LW, MW and ) RECEIVER and BK1086 is a subset of the BK1088 (it does not have LW and SW acording to the Datasheet).</li>
-<li><a href="https://pu2clr.github.io/RDA5807/">PU2CLR RDA5807 Arduino Library</a>. The RDA5807 is a FM DSP integrated circuit receiver (50 to 115MHz) with low noise amplifier support. This device requires very few external components if compared with other similar devices. It also supports RDS/RBDS functionalities, direct auto gain control (AGC) and real time adaptive noise cancellation function.</li>
-<li><a href="https://pu2clr.github.io/SI470X/">PU2CLR SI470X Arduino Library</a>. It is a Silicon Labs device family that integrates the complete functionalities for FM receivers, including RDS (Si4703).</li>
-<li><a href="https://pu2clr.github.io/PCF8574/">PU2CLR - PCF8574 Arduino Library</a>. It is an Arduino Library to control the PCF8574 8-Bit I/O Expander. The PCF8574 device provides 8-bit, general purpose, parallel I/O expansion. It can be controlled via I²C bus applications. It is a great and inexpensive device that allow you to add more peripherals to be controlled by your Arduino board via I²C protocol. </li>
-<li><a href="https://pu2clr.github.io/SI5351/">Multipurpose signal generator with SI5351</a>. It is a multipurpose signal generator controlled by Arduino. This project uses the SI5351 from Silicon Labs. The Arduino sketch is configured to control the SI5351 with three channels from 32.768KHz to 160MHz and steps from 1Hz to 1MHz.</li>
-<li><a href="https://pu2clr.github.io/Small-Shortwave-Transmitter/">Shortwave Arduino Transmitter</a>. This project is about a shortwave transmitter from 3 MHz to 30 MHz. It uses the SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. In this case, you will not need the SI5351 device and Arduino. </li>
-<li><a href="https://pu2clr.github.io/bluetooth_remote_control/">Android and iOS Bluetooth Remote Control for PU2CLR Arduino Library DSP receivers</a>. This project is an extension of the Arduino library projects for: <a href="https://pu2clr.github.io/SI4735/">SI4735</a>; <a href="https://pu2clr.github.io/AKC695X/">AKC6959</a> and <a href="https://pu2clr.github.io/KT0915/">KT0915</a>. It is a simple example that shows a way to use your smartphone as a remote control via Bluetooth. In order to follow the steps presented here, I am assuming that you have some knowledge in development for mobile devices. Also, you will need to be familiar with the Javascript programming language. The development environment used by this project is the <a href="https://cordova.apache.org/docs/en/latest/guide/overview/index.html">Apache Cordova</a>. Cordova is a open-source mobile development framework that allows you to develop cross-platform applications. That means you can code once and deploy the application in many system, including iOS and Android. 
-Cordova provides an easy way to develop for iOS and Android.  </li>
-<li><a href="https://pu2clr.github.io/auto_bpf_arduino/">Band Pass Filter controlled by Arduino</a>. It is a HF band pass filter controlled by Arduino. It is designed for HF receivers. With this project, you can use a set of up to four HF bandpass filters that can be selected by Arduino. To do that you will need just two digital Arduino pins.</li>
-</ul>
-<h3 id="basic-schematic">Basic schematic</h3>
-<p>The image below shows a basic MCP23008 application with LED. You can control up to 8 LEDs. The I²C bus address is set to 0x20. You can select another I²C address by dealing with the A0,A1 and A2 pins (from 0x20 to 0x27). This circuit uses the MCP23008 GPIO PINs as output.   </p>
-<h4 id="gpio-as-output-setup">GPIO as output setup</h4>
-<p><img src="extras/images/basic_schematic_output.png" alt="Basic Schematic with LEDs"></p>
-<h5 id="arduino-setup-suggestion">Arduino setup suggestion</h5>
-<pre><code class="language-cpp">#include &lt;pu2clr_mcp23008.h&gt;
-
-MCP mcp;
-
-void setup() {
-  mcp.setup(0x20, 0); // I²C Address 0x20 and all GPIO pins configured to output
-</code></pre>
-<p>You also can use the methos setRegister as shown below (See MCP23008 IODIR register)</p>
-<pre><code class="language-cpp">    mcp.setRegister(REG_IODIR, 0B00000000);    // Sets  all GPIO pins to output
-</code></pre>
-<h5 id="output-setup-example">Output setup example</h5>
-<pre><code class="language-cpp">#include &lt;pu2clr_mcp23008.h&gt;
-
-MCP mcp;
-
-void setup() {
-    mcp.setup(0x20,0);   // I²C address 0x20; All GPIO port/pin are configured as output
-}
-
-void loop() {
-    for (uint8_t i = 0; i &lt; 8; i++)
-    {
-        mcp.turnGpioOn(i); // Turns the GPIO / port i on
-        delay(200);
-        mcp.turnGpioOff(i); // Turns the GPIO / port i off
-        delay(200);
-    }
-    delay(2000);
-    for (uint8_t i = 0; i &lt; 8; i++)
-    {
-        mcp.turnGpioOn(i); // Turns the GPIO / port i on
-        delay(300);
-    }
-    delay(2000);
-    for (uint8_t i = 0; i &lt; 8; i++)
-    {
-        mcp.turnGpioOff(i); // Turns the GPIO / port i off
-        delay(300);
-    }
-    delay(2000);
-}
-</code></pre>
-<h4 id="gpio-as-input-setup">GPIO as input setup</h4>
-<p><img src="extras/images/basic_schematic_input.png" alt="Basic Schematic with LEDs"></p>
-<h5 id="arduino-setup-suggestion-1">Arduino setup suggestion</h5>
-<pre><code class="language-cpp">void setup() {
-  mcp.setup(0x20, 0B11111111); // I²C Address 0x20 and all GPIO pins configured to input
-</code></pre>
-<p>You also can use the methos setRegister as shown below (See MCP23008 IODIR register)</p>
-<pre><code class="language-cpp">    mcp.setRegister(REG_IODIR, 0B11111111);    // Sets  all GPIO pins to input
-</code></pre>
-<h4 id="gpio-as-input-and-output-setup">GPIO as input and output setup</h4>
-<p><img src="extras/images/basic_schematic_io.png" alt="Basic Schematic with LEDs"></p>
-<pre><code class="language-cpp">#include &lt;pu2clr_mcp23008.h&gt;
-
-MCP mcp;
-
-void setup() {
-  mcp.setup(0x20, 0B00001111); // I²C Address 0x20, GPIO 0-3 are inputs and  4-7 are outputs
-</code></pre>
-<p>You also can use the methos setRegister as shown below (See MCP23008 IODIR register)</p>
-<pre><code class="language-cpp">    mcp.setRegister(REG_IODIR, 0B00001111);    // Sets  GPIO pins 0-3 to input and  GPIO pins 4-7 to output
-</code></pre>
-<h4 id="see-inputoutput-sketch-example"><a href="https://github.com/pu2clr/MCP23008/tree/main/examples/mcp_poc_03_input_output">See input/output sketch example</a></h4>
-<h3 id="prototype">Prototype</h3>
-<p>The prototype below is based on the GPIO as input and output setup schematic</p>
-<p><img src="extras/images/mcp_input_output1.png" alt="Basic prototype based on input / output schematic"></p>
-<h3 id="internal-interrupt-setup">Internal Interrupt setup</h3>
-<p>The MCP23008 device has internal interrupt support. That means you can know instantly when a GPIO configured as input changed its status (from high to low or from low to high). This library implements some functions to support MCP23008 internal interrupts. You also can configure the internal interrupt behaviour. See the <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/">MCP23008 library API for more details</a>.  See also <a href="examples/">the examples mcp_poc_interrupt01 ans mcp_poc_interrupt01</a>. </p>
-<p>The code below shows how to setup internal interrupt on given GPIO pin. Observe the MCP23008 internal pullup configured before configuring the interrupt. In this setup, the gpio.</p>
-<p>It is important to know: <strong>only  pins  configured  as  inputs  can  cause  interrupts. Pins configured as outputs have no affect on INT. After an interrupt is triggered, you can not deal with other interrupt until GPIO or INTCAP registers is read. Only reading GPIO or INTCAP registers  will clean the interrupt status and will make a new interrupt possible</strong>. </p>
-<pre><code class="language-cpp">
-  mcp.pullUpGpioOn(MCP_GPIO1);          // Enables internal pullup resistor on gpio pin 1
-  mcp.pullUpGpioOn(MCP_GPIO3);          // Enables internal pullup resistor on gpio pin 3
-  
-  mcp.setInterrupt(INTERRUPT_INTPOL_ACTIVE_HIGH, INTERRUPT_ODR_OPEN_DRAIN); // Defines the behaviour of the interrupt
-
-  // GPIO pin 1 setup
-  mcp.interruptGpioOn(MCP_GPIO1, HIGH); // Sets the GPIO pin 1 to deal with interrupt. The pin 1 will be compared with the value 1 (HIGH). It will be launch an interrupt if the pin 1 goes to level 0 (LOW).
-
-  // GPIO pin 5 setup
-  mcp.interruptGpioOn(MCP_GPIO3, HIGH); // Sets the GPIO pin 3 to deal with interrupt. The pin 3 will be compared with the value 1 (HIGH). It will be launch an interrupt if the pin 1 goes to level 0 (LOW).
-</code></pre>
-<p>Again. see also <a href="examples/">the examples mcp_poc_interrupt01 ans mcp_poc_interrupt02</a> for more details. The schematic below can be used to check MCP23008 interrupt applications.</p>
-<p><img src="extras/images/basic_schematic_interrupt.png" alt="Basic schematic for interrupt setup"></p>
-<h3 id="mcp23008-reset-control">MCP23008 reset control</h3>
-<p>In most applications you can use the MC23008 reset pin directly connected to the VCC. <strong>You can also connect the MCP23008 RESET pin to the Arduino RESET pin (It is better than previous setup)</strong>. 
-However, you might need to control the reset  via your Arduino sketch. If so, check the setup and reset functions to do that on <a href="https://pu2clr.github.io/MCP23008/extras/apidoc/html/">MCP23008 library API Documentation</a>.  The code below shows the RESET setup on Arduino and MCP23008.</p>
-<pre><code class="language-cpp">#include &lt;pu2clr_mcp23008.h&gt;
-
-#define RESET_PIN 12  // Arduino pin 12 will be used to control the MCP23008 RESET
-
-MCP mcp;
-
-
-void setup() {
-
-  mcp.setup(0x20, 0B00001111, RESET_PIN);  // GPIO 0 to 3 are input (buttons) and 4 to 7 are output (LEDs)
-  mcp.setRegister(REG_GPPU, 0B00001111); // sets GPIO 0 to 3 with internal pull up resistors
-
-  .
-  .  
-  . 
-  mcp.reset();  // the setup function above already called the MCP23008 reset. But you can also call reset function if you need it in other situation
-</code></pre>
-<h3 id="references">References</h3>
-<ul>
-<li><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/21919e.pdf">2-Wire Serial I/O Expander and Fan Controller</a></li>
-</ul>
+</tbody>
+</table>
+<p>Also this library has other functions that make the job easier to
+build applications. See <a
+href="https://www.youtube.com/watch?v=muUAhf5DGE8">API
+documentation</a>.</p>
