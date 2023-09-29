@@ -1,9 +1,8 @@
-
 <html><head><style>body {
    color: black;
 }
 </style></head><body><p>Documentation made in <a href="https://pandao.github.io/editor.md/en.html" title="Open source online Markdown editor">Open source online Markdown editor</a> and converted to HTML in <a href="https://markdowntohtml.com/" title="Convert Markdown to HTML">Free Markdown to HTML Converter</a>.</p>
-<h2 id="-antar-mic74-arduino-library-https-tarandr-github-io-mic74-"><a href="https://tarandr.github.io/MIC74/">AnTar MIC74 Arduino Library</a></h2>
+<h2 id="-antar-mic74-arduino-library-https-github-com-tarandr-antar_mic74-"><a href="https://github.com/TarAndr/AnTar_MIC74">AnTar MIC74 Arduino Library</a></h2>
 <p>It is an Arduino Library to control the MIC74 8-Bit I/O Expander. </p>
 <p>The MIC74 device provides 8-bit, general purpose, parallel I/O expansion. It can be controlled via I²C bus applications. It is a great and inexpensive device that allow you to add more peripherals to be controlled by your Arduino board via I²C protocol.</p>
 <p>Some Arduino projects may require more pins than the Arduino actually has. In these cases, you can use up to 8 MIC74 devices using only the I²C bus (two Arduino pins) and add up to 64 input / output ports to your project. </p>
@@ -12,19 +11,22 @@
 <p><strong>Contents</strong></p>
 <p>[TOCM]</p>
 <p>[TOC]</p>
-<ol>
-<li><a href="#mit-license">License Copyright</a></li>
+<ul>
+<li><p><a href="https://github.com/TarAndr/AnTar_MIC74" title="AnTar MIC74 Arduino Library">AnTar MIC74 Arduino Library</a></p>
+</li>
+<li><p><a href="#mit-license">MIT License</a></p>
+</li>
 <li><a href="#thanks">Thanks</a></li>
 <li><a href="#library-features">Library Features</a></li>
 <li><a href="#demo-video">Demo Video</a></li>
-<li><a href="#registers">Registers</a></li>
 <li><a href="#library-installation">Library Installation</a></li>
-<li><a href="https://tarandr.github.io/MIC74/#other-arduino-libraries-developed-by-the-author">Other Arduino Libraries developed by the Author</a></li>
+<li><a href="#Brief-characteristics-of-the-MIC74-chip">MIC74 brief characteristics</a></li>
+<li><a href="#Description-and-purpose-of-registers-of-the-MIC74">MIC74 registers</a></li>
 <li><a href="https://tarandr.github.io/MIC74/extras/apidoc/html/">API documentation</a></li>
 <li><a href="https://tarandr.github.io/MIC74/#basic-schematic">Basic Schematic</a></li>
 <li><a href="https://tarandr.github.io/MIC74/#internal-interrupt-setup">Internal Interrupt setup</a> </li>
 <li><a href="https://tarandr.github.io/MIC74/#references">References</a></li>
-</ol>
+</ul>
 <h3 id="mit-license">MIT License</h3>
 <p>Copyright (c) 2023 Andrey Tarasenko</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,8 +63,44 @@ SOFTWARE.</p>
 <p><a href="https://www.youtube.com/watch?v=muUAhf5DGE8">See on Youtube</a></p>
 <BR>
 
-<h3 id="registers">Registers</h3>
-<p>This library has two basic function that you can use to control everything on MIC74. You can use <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">regRead</a> and <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">regWrite</a> methods to setup the registers below. Also this library has other functions that make the job easier to build applications based on Arduino and MIC74 devices. See <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">API documentation</a>.</p>
+<h3 id="library-installation">Library Installation</h3>
+<p>You can install this library on your Arduino environment using different methods. The best ways to do that are described below.  </p>
+<h4 id="installing-via-arduino-ide">Installing via Arduino IDE</h4>
+<p>This is the easiest method to install this library.</p>
+<p>On Arduino IDE, select the <strong>&quot;Tools&quot; &gt;&gt; Manage Libraries...&quot;</strong> item and look for MIC74. Finally select &quot;AnTar MIC74&quot;. The images below show the installation process. </p>
+<h5 id="going-to-manage-libraries-">Going to Manage libraries...</h5>
+<p><img src="extras/images/00_MIC74.jpg" alt="Manage libraries"></p>
+<h5 id="looking-for-mic74">Looking for MIC74</h5>
+<p><img src="extras/images/00_MIC74.jpg" alt="Looking for MIC74"></p>
+<h5 id="checking-the-antar-mic74-examples">Checking the AnTar MIC74 examples</h5>
+<p><img src="extras/images/00_MIC74.jpg" alt="Checking examples"></p>
+<h5 id="more-information">More information</h5>
+<p>See also <a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">Installing Libraries</a></p>
+<h4 id="installing-via-this-repository">Installing via this repository</h4>
+<p>First, you have to <a href="https://github.com/TarAndr/AnTar_MIC74/archive/main.zip">download</a> this library in zip format. 
+After, unzip the AnTar_MIC74-main.zip file in your Arduino Library folder:</p>
+<ul>
+<li>On <strong>Windows</strong>: &quot;My Documents\Arduino\libraries&quot;</li>
+<li>On <strong>MAC OS</strong>: ˜/Documents/Arduino/libraries</li>
+<li>On <strong>Linux</strong>: ˜/Documents/Arduino/libraries</li>
+</ul>
+<p>With that approach, you will have the <strong>most current version</strong> of the library. However, <strong>it may not be the most stable version</strong>. This is because the current version is always in development.
+Do you need some old version (release) of this library?  If yes, <a href="https://github.com/TarAndr/AnTar_MIC74/releases">check here</a>. </p>
+<h3 id="brief-characteristics-of-the-mic74-chip">Brief characteristics of the MIC74 chip</h3>
+<p>The MIC74 chip is a fully programmable serial-to-parallel I/O expander converter that is compatible with the SMBus™ protocol. It operates as a bus client providing eight independent I/O lines.</p>
+<p>Each I/O bit can be individually programmed as an input or output. If any pin is programmed as an output, then each such pin can be programmed as an open-drain output or a push-pull output. If desired, four outputs can be programmed to implement fan speed control. An internal clock and status system eliminates the overhead required to control fan speed.</p>
+<p>The output pins are capable of directly driving loads such as LEDs. It is possible to use interrupts during state changes on the input pins. This eliminates the need to poll the device each time to obtain pin status information. Three address selection inputs are provided, allowing up to eight devices to be connected and shared on the same bus, providing a total of 64 additional I/Os to your microcontroller.</p>
+<p>The MIC74 chip is available in an ultra-compact 16-pin QSOP package. Low quiescent current, small footprint and low chassis height make the MIC74 ideal for portable and desktop applications:</p>
+<p><img src="extras/images/00_MIC74-2-Wire-Serial-IO-Expander-and-Fan-Controller.png" alt="MIC74 housing type and pinout" title="MIC74 housing type and pinout"></p>
+<ul>
+<li>A0, A1, A2 - Client address setting inputs, the three least significant bits of the MIC74 chip address are set;</li>
+<li>P0, P1, P2, P3, P4, P5, P6, P7 - General purpose I/O contacts, direction and type of output user programmable;</li>
+<li>/ALERT - An output with an active low level and an open drain, an interrupt output signal for the host when the logic level changes at the inputs of the microcircuit. The signal is cleared when the bus host polls the ARA (alert response address = 0001100) or reads the status;</li>
+<li>CLK - The host provides the clock clock on this input;</li>
+<li>DATA - Serial data input and serial data output with open drain.</li>
+</ul>
+<h3 id="description-and-purpose-of-registers-of-the-mic74">Description and purpose of registers of the MIC74</h3>
+<p>For configuration and control, the MIC74 chip has 7 registers, each of which consists of 8 bits:</p>
 <table>
 <thead>
 <tr>
@@ -109,28 +147,35 @@ SOFTWARE.</p>
 </tr>
 </tbody>
 </table>
-<p>Also this library has other functions that make the job easier to build applications. See <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">API documentation</a>.</p>
-<h3 id="library-installation">Library Installation</h3>
-<p>You can install this library on your Arduino environment using different methods. The best ways to do that are described below.  </p>
-<h4 id="installing-via-arduino-ide">Installing via Arduino IDE</h4>
-<p>This is the easiest method to install this library.</p>
-<p>On Arduino IDE, select the <strong>&quot;Tools&quot; &gt;&gt; Manage Libraries...&quot;</strong> item and look for MIC74. Finally select &quot;AnTar MIC74&quot;. The images below show the installation process. </p>
-<h5 id="going-to-manage-libraries-">Going to Manage libraries...</h5>
-<p><img src="extras/images/00_MIC74.jpg" alt="Manage libraries"></p>
-<h5 id="looking-for-mic74">Looking for MIC74</h5>
-<p><img src="extras/images/00_MIC74.jpg" alt="Looking for MIC74"></p>
-<h5 id="checking-the-antar-mic74-examples">Checking the AnTar MIC74 examples</h5>
-<p><img src="extras/images/00_MIC74.jpg" alt="Checking examples"></p>
-<h5 id="more-information">More information</h5>
-<p>See also <a href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">Installing Libraries</a></p>
-<h4 id="installing-via-this-repository">Installing via this repository</h4>
-<p>First, you have to <a href="https://github.com/TarAndr/AnTar_MIC74/archive/main.zip">download</a> this library in zip format. 
-After, unzip the AnTar_MIC74-main.zip file in your Arduino Library folder:</p>
 <ul>
-<li>On <strong>Windows</strong>: &quot;My Documents\Arduino\libraries&quot;</li>
-<li>On <strong>MAC OS</strong>: ˜/Documents/Arduino/libraries</li>
-<li>On <strong>Linux</strong>: ˜/Documents/Arduino/libraries</li>
+<li>DEV_CFG - Chip configuration register, the two least significant bits of which set operating modes, such as global interrupt enable and fan control. The remaining bits are reserved and must always be set to zero. After the chip starts up, by default all bits of this register are set to zero, meaning that interrupts and fan control mode are disabled. To enable interrupts, you need to set the zero bit, and to control the fan, set bit number 1 to one, for example, by writing the value 0b00000011 to the register. The register is intended for both writing and reading.;</li>
+<li>DIR - Register for setting all or individual pins to work as inputs or outputs. Once enabled, the register has a default value of 0b00000000 and all pins are configured as inputs. Accordingly, to configure a separate pin to operate as an output, the corresponding bit of this register must be set to one. You can also read set values from the register. If the chip is configured for fan control, the P[7:4] pins are automatically configured as open-drain outputs, and the DIR register does not affect the operation of these pins;</li>
+<li>OUT_CFG - Register for setting all or individual pins configured as outputs to operate in push-pull or open-drain mode. The default register value is 0b00000000 and all output stages are configured to operate in open drain mode. Accordingly, to configure a separate output to operate in push-pull mode, the corresponding bit of this register must be set to one. You can also read set values from the register. If the chip is configured for fan control, the P[7:4] pins are automatically configured as open-drain outputs, and the OUT_CFG register does not affect the operation of these pins;</li>
+<li>STATUS - The bits of this register record events of changes in the logical level at the corresponding pins of the microcircuit, configured as inputs. The bit is set to one when the logic level changes at the corresponding input, and if no change occurs, the bit is reset to 0. The register is read-only, and all its bits are reset to 0 after this operation is performed. If the chip is configured for fan control, the P[7:4] pins are automatically configured as open-drain outputs, and no interrupts are generated by changing the logic levels on these pins;</li>
+<li>INT_MASK - Interrupt enable register on the required pins configured as inputs, and the corresponding bits of which are set to one in this register. The register is used for reading/writing. If the chip is configured for fan control, the P[7:4] pins are automatically configured as open-drain outputs, and no interrupts are generated by changing the logic levels on these pins;</li>
+<li>DATA - The register displays the current state of any pin configured as an input and the last value applied to a pin configured as an output. Writing a value to the DATA register sets the state of any pin configured as an output; writes to I/O bits configured as inputs are ignored. By default, all register bits are set to one. If the chip is configured for fan control, the P[7:4] pins are automatically configured as open drain outputs and their logic levels are controlled by the FAN_SPEED register, and the DATA register does not affect the operation of these pins;</li>
+<li>FAN_SPEED - Fan operation control register, in which the three least significant bits are used. Any time the register contains a value of zero, it means the fan is off, and if a non-zero value is written to it, the /FS[2:0] and /SHDN outputs will go to the maximum fan speed state for approximately one second (tSTART). After this interval, the state of the fan speed control outputs will take the value specified in the contents of the FAN_SPEED register. This ensures that the fan starts reliably even when low speed operation is required. The dependence of the fan rotation speed on the value of the low-order bits of the register is shown in the following table, with “Speed 1” corresponding to the lowest, and “Speed 7” the highest actual fan rotation speed.</li>
 </ul>
-<p>With that approach, you will have the <strong>most current version</strong> of the library. However, <strong>it may not be the most stable version</strong>. This is because the current version is always in development.
-Do you need some old version (release) of this library?  If yes, <a href="https://github.com/TarAndr/AnTar_MIC74/releases">check here</a>. </p>
+<h3 id="functions">Functions</h3>
+<p>This library has two categories of functions that you can use to control everything on the MIC74. The first category includes configuration functions and is used less frequently, while the second category consists of control functions and is used more often. This library also has other auxiliary functions that simplify the creation of applications based on Arduino and MIC74 devices. See <a href="https://tarandr.github.io/MIC74/extras/apidoc/html/">API documentation</a>.</p>
+<h4 id="configuration-functions">Configuration functions</h4>
+<p>Function for setting the pin direction and operating mode of the output:</p>
+<p><strong>pinMode(<em>pin, mode</em>);</strong></p>
+<ul>
+<li><strong>pin</strong>: port pin 0 to 7;</li>
+<li><strong>mode</strong>: the desired operating mode of the specified INPUT, OUTPUT, INPUT_WITH_INTERRUPT or OUTPUT_PUSHPULL pin.</li>
+</ul>
+<p>This function interacts with three registers at once and, in addition to specifying the output direction, can set an interrupt mask for it, in the case of setting the output to an input, or a push-pull mode for the output stage, in the case of setting the output to an output. In the case of simply specifying a pin to operate as an input, interrupts for it will be disabled, and for operation as an output, the operating mode of the output stage will be set to open drain.</p>
+<p>Function to configure the entire port at once</p>
+<p><strong>writePortMode(<em>value</em>);</strong></p>
+<ul>
+<li><strong>value</strong>: a specified value, which for clarity is conveniently represented as a bit field 0bxxxxxxxx.</li>
+</ul>
+<p>Where in the required positions “0” or “1” is written instead of “x”, for example writePortMode(0b11111111); will simultaneously set all pins of the chip to the output direction, and writePortMode(0b00000000); accordingly to the entrance.</p>
+<h4 id="control-functions">Control functions</h4>
+<h3 id="basic-schematic">Basic schematic</h3>
+<p>The image below shows a basic MIC74 application with LED. You can control up to 8 LEDs. The I²C bus address is set to 0x27. You can select another I²C address by dealing with the A0, A1 and A2 pins (from 0x20 to 0x27). This circuit uses the MIC74 GPIO PINs as output.   </p>
+<h4 id="gpio-as-output-setup">GPIO as output setup</h4>
+<p><img src="extras/images/MIC74_LEDs.GIF" alt="Basic Schematic with LEDs"></p>
+<p>Also this library has other functions that make the job easier to build applications. See <a href="https://www.youtube.com/watch?v=muUAhf5DGE8">API documentation</a>.</p>
 </body></html>
